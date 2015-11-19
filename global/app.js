@@ -1,16 +1,20 @@
 
-function a() {
-  b();
-  var c;
-}
-
 function b() {
-  console.log('Called b');
-  var d = 1;
+  var myVar;
+  console.log("b myVar = " + myVar)
+
 }
 
 
-a();
-var d = 2;
+function a() {
+ var myVar = 2;
+ console.log("a myVar = " + myVar)
 
-console.log(d)
+ b()
+}
+
+
+
+var myVar = 1;
+console.log("global myVar = " + myVar)
+a();
