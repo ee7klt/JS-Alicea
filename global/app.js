@@ -18,3 +18,4 @@ function a() {
 var myVar = 1;
 console.log("global myVar = " + myVar)
 a();
+console.log("global myVar = " + myVar)
