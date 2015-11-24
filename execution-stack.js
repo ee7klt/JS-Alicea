@@ -5,8 +5,13 @@ function a() {
 
 function b() {
   console.log('called b');
-  var d;
+  var d = 1;
 }
 
+console.log(d)
+
 a();
-var d;
+
+var d = 2;
+
+console.log(d)
