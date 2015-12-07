@@ -19,13 +19,15 @@ var b = function () {
 var c = {
   name: 'The c object',
   log: function () {
-    this.name = 'updated c object'
-    console.log(this)
+    var self = this;
+
+    self.name = 'updated c object'
+    console.log(self)
     var setname = function(newname) {
-      this.name = newname;
+      self.name = newname;
     }
     setname('this is newname')
-      console.log(this)
+      console.log(self)
   }
 }
 
