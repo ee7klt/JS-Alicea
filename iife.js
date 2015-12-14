@@ -37,7 +37,35 @@ var greeting3 = function(name) {
 
 console.log(greeting3)
 
+// // can't immediately invoke statements?
+// function test() {
+//   console.log('this is a test')
+// }();   //syntax error
 
-function test() {
-  console.log('this is a test')
-}();
+3;
+'i am a string'; // no errors for running expressions
+
+// this is parsed as statement, JS returns syntax error
+// function(name) {
+//   console.log('Hello '+name);
+// }
+
+// putting parantheses makes JS think its an expression.
+// only ever use () operator with expressions
+(function(name) {
+  return 'Hello '+name;
+})
+
+// doesn't this do anything?
+(function(name) {
+  return 'Hello '+name;
+})   // no, it didn't
+
+
+
+
+
+
+(function(name) {
+  console.log( 'Hello '+name);
+})('alex')
