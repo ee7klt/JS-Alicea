@@ -54,18 +54,37 @@ console.log(greeting3)
 // only ever use () operator with expressions
 (function(name) {
   return 'Hello '+name;
-})
+});
 
 // doesn't this do anything?
 (function(name) {
   return 'Hello '+name;
-})   // no, it didn't
+}('john'));  // no, it didn't
+
+(function(name) {
+  return 'Hello '+name;
+})('john');  // neither did this
+
+// var asdf = (function(name) {
+//   return 'Hello '+name;
+// }('asdf'));  // no, it didn't
+// console.log(asdf);   // this is just the same thing i did above
 
 
+var asdf = function(name) {
+  return 'Hello '+name;
+}('asdf');
+
+console.log(asdf);
 
 
-
+// interesting, does it not matter whether the invoking parantheses are
+// within the expression operator
+// or outside it??
+(function(name) {
+  console.log( 'Hello '+name);
+}('alex'));
 
 (function(name) {
   console.log( 'Hello '+name);
-})('alex')
+})('alex');
