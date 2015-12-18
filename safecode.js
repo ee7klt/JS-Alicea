@@ -1,9 +1,9 @@
 // all this code in IIFE () is 'safe'.
 // variables are contained within it
 
-(function(name) {
+(function(global, name) {
   var greeting = 'Hello';
   console.log(greeting + ' ' + name);
-}('safecode'))
+}(window,'safecode'))
 
 console.log(greeting)
