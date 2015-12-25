@@ -3,6 +3,7 @@
 
 (function(global, name) {
   var greeting = 'Hello';
+  // global.greeting = 'Hello'; // crash in to global intentionally
   console.log(greeting + ' ' + name);
 }(window,'safecode'))
 
