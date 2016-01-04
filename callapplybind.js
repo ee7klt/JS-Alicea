@@ -29,5 +29,18 @@ logNameSuccess('en','es')
 
 var logName2 = function (lang1, lang2) {
   console.log('Logged: '+ this.getFullName());
-}.bind(person)
-logName2('en','es')
+}.bind(person);
+logName2('en','es');
+
+
+logName.call(person, 'en', 'es')
+
+logName.apply(person, ['en', 'es']);
+
+
+
+(function (lang1, lang2) {
+  console.log('Logged: '+ this.getFullName());
+  console.log('Arguments: '+lang1+' '+lang2);
+  console.log('-----------')
+}).apply(person,['en','fr']);
