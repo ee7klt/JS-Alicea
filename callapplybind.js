@@ -56,3 +56,16 @@ var person2 = {
 console.log(person.getFullName())
 
 console.log(person.getFullName.apply(person2))
+
+
+//function currying
+
+function multiply(a, b) {
+  return a*b;
+}
+
+var multiplyByTwo = multiply.bind(this, 2);
+// not calling, making a copy of function
+// if making a copy, what does setting a parameter to?
+// it hard codes that parameter to the value you set in the new function copy
+console.log(multiplyByTwo(4)) //returns 8
