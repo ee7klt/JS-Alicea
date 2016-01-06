@@ -44,3 +44,15 @@ logName.apply(person, ['en', 'es']);
   console.log('Arguments: '+lang1+' '+lang2);
   console.log('-----------')
 }).apply(person,['en','fr']);
+
+
+// function borrowing
+
+var person2 = {
+  firstName: 'Jane',
+  lastName: 'Doe'
+}
+
+console.log(person.getFullName())
+
+console.log(person.getFullName.apply(person2))
