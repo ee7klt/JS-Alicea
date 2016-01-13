@@ -32,4 +32,6 @@ var jane = {
 }
 
 jane.__proto__ = person;
-console.log(jane.getFullName());
+console.log(jane.getFullName()); // returns 'Jane Default'
+// found firstname, but not lastname in object jane.
+// goes up the proto chain and finds lastname = Default
