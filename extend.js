@@ -41,3 +41,8 @@ var jim = {
 console.log(john);
 _.extend(jane,john);
 //console.log(jane);
+
+
+for (var prop in john) {
+  console.log(prop)
+}
