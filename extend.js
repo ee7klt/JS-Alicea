@@ -35,5 +35,9 @@ var jim = {
 }
 
 
-_.extend(john, jane, jim);
-console.log(john)
+//_.extend(john, jane, jim);
+//console.log(john)
+
+console.log(john);
+_.extend(jane,john);
+//console.log(jane);

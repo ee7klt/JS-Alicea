@@ -103,6 +103,7 @@
         var source = arguments[index],
             keys = keysFunc(source),
             l = keys.length;
+        console.log(keys);
         for (var i = 0; i < l; i++) {
           var key = keys[i];
           if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
