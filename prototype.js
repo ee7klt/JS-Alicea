@@ -2,6 +2,10 @@ function Person(firstname,lastname) {
     //console.log(this);
   this.firstname = firstname;
   this.lastname = lastname;
+  //this.getFullName = ...  // not good idea to put methods in the constructor.
+  // instead, define them on the prototype of the constructor
+  // so that there is only one copy of the method. instead of
+  // a copy fo the method for every object created.
 
  //return {}
 }
