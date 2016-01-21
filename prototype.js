@@ -17,11 +17,15 @@ console.log(a); // undefined
  a = 2
 
 
-//console.log(Person.prototype)  // are prototype assignments hoisted?
+//console.log(Person.prototype)  // are prototype assignments hoisted? // no
+// quirk of the console.
+// console.log(Person.prototype.getFullName) instead
+
+console.log(Person.prototype.getFullName)   // undefined
 Person.prototype.getFullName = function() {
   console.log(this.firstname + ' ' + this.lastname)
 }
-
+console.log(Person.prototype.getFullName) // function() {console.log(this.firstname ...)}
 //console.log(Person.prototype)
 
 
