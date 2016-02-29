@@ -1,0 +1,3 @@
+(function Greetr(global,$) {
+
+  }(window,$));
