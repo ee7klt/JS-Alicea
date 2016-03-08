@@ -51,8 +51,39 @@ var logMessages = {
     },
 
     greet: function(formal) {
-      if (formal) return this.formalGreeting();
-      else return this.greeting();
+      var msg;
+
+      if (formal) {
+        msg = this.formalGreeting();
+      }
+      else {
+        msg = this.greeting();
+      }
+      if (console) {   // IE doesn't have console unless it's open, so test for it.
+        console.log(msg);
+      }
+
+      // this will be the calling object
+      // to make it chainable, return this.
+
+      return this;
+    },
+
+    log: function() {
+      if (console) {
+        console.log(logMessages[this.language] + ': '+this.fullName());
+      }
+      return this;
+    },
+
+    setLang: function(lang) {
+      if (lang === 'en')
+        this.language = lang;
+      else if (lang === 'es')
+        this.language = lang;
+      else throw "Cannot setLang. Not a valid language";
+      return this;
+
     }
 
 
