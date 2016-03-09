@@ -89,6 +89,9 @@ var logMessages = {
     injectGreeting: function(selector, formal) {
     // inject greeting in to selector.
      var msg
+     // this is silly. i've repeated greet() from above
+     // but i wanted greet to return 'this' and not msg
+     // how to return both??
      if (formal) {
        msg = this.formalGreeting();
      }

@@ -10,3 +10,8 @@ john.setLang('es').greet().log();
 $('#login').click(function() {
   john.injectGreeting('#greeting');
 })
+
+$('select').change(function() {
+  var lang = this.value;
+  john.setLang(lang).greet();
+})
