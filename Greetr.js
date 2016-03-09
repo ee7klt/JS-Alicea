@@ -84,7 +84,21 @@ var logMessages = {
       else throw "Cannot setLang. Not a valid language";
       return this;
 
+    },
+
+    injectGreeting: function(selector, formal) {
+    // inject greeting in to selector.
+     var msg
+     if (formal) {
+       msg = this.formalGreeting();
+     }
+     else {
+       msg = this.greeting();
+     }
+      $(selector).text(msg);
     }
+
+
 
 
   };
