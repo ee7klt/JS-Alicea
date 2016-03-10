@@ -26,7 +26,7 @@ var logMessages = {
     this.lastName = lastName || '';
     this.language = language || '';
 
-
+    //this.validate();
   }
 
   // these are exposed
@@ -88,6 +88,14 @@ var logMessages = {
 
     injectGreeting: function(selector, formal) {
     // inject greeting in to selector.
+
+    if (!$) {
+      throw 'jQuery not loaded';
+    }
+
+    if (!selector) {
+      throw 'missing jQuery selector';
+    }
      var msg
      // this is silly. i've repeated greet() from above
      // but i wanted greet to return 'this' and not msg
@@ -99,6 +107,8 @@ var logMessages = {
        msg = this.greeting();
      }
       $(selector).text(msg);
+
+      return this;
     }
 
 
